@@ -1,0 +1,57 @@
+/* ===== CUSTOM PROPERTIES ===== */
+:root {   
+    --clr-neutral-600: hsl(212, 27%, 19%);
+    --clr-neutral-400: hsl(213, 9%, 39%);
+    --clr-neutral-300: hsl(232, 10%, 55%);
+    --clr-neutral-200: hsl(210, 4%, 67%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --clr-primary-400: hsl(198, 62%, 26%);
+
+    --clr-secondary-400: hsl(168, 34%, 41%);
+    --clr-secondary-600: hsl(167, 40%, 24%);
+
+    --clr-accent-1: hsl(51, 100%, 49%);
+
+    --clr-accent-2: hsl(7, 99%, 70%);
+
+    --fs-400: 1.125rem;
+
+    --fw-400: 600;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    --ff-primary: 'Barlow', sans-serif;
+    --ff-secondary: 'Fraunces', serif;
+}
+
+/* ===== GLOBAL STYLES ===== */
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--clr-neutral-600);
+    background-color: var(--clr-neutral-100);
+}
+/* ===== COMPOSITION ===== */
+/* ===== UTILITY ===== */
+
+.container {
+    width: 90%;
+    max-width: 90rem;
+    margin-inline: auto;
+}
+
+.container[data-type="full-lenght"] {
+    width: 100%;
+}
+
+.container[data-type="medium"] {
+    width: 75%;
+}
+
+.container[data-type="medium"] {
+    width: 65%;
+}
+/* ===== BLOCK ===== */
