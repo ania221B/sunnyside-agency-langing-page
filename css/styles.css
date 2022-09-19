@@ -269,6 +269,7 @@ footer h4:focus path {
 .flow > * + * {
     margin-top: var(--spacing, 2rem);
 }
+
 /* ===== UTILITY ===== */
 
 .container {
@@ -347,6 +348,21 @@ footer h4:focus path {
 }
 
 /* ===== BLOCK ===== */
+
+.skip-to-content {
+    position: absolute;
+    inset: 0 auto auto 50%;
+    z-index: 2;
+    transform: translate(-50%, -100%);
+    padding: .5em 1.5em;
+    background-color: hsl(var(--clr-neutral-100));
+    color: hsl(var(--clr-neutral-600));
+    transition: transform 500ms ease-in-out;
+}
+
+.skip-to-content:focus {
+    transform: translate(-50%, 0);
+}
 
 /* ===== navigation ===== */
 
