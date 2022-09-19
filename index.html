@@ -35,7 +35,7 @@
     >
     <header class="header-main">
       <div class="container" data-type="standard">
-        <nav class="primary-nav">
+        <nav id="primary-nav" class="primary-nav">
           <h1 class="logo">
             <a href="#hero">
               <svg width="124" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,23 @@
               </svg>
             </a>
           </h1>
-          <ul class="nav__list" role="list">
+
+          <button
+            class="js-menu-btn menu-btn"
+            aria-controls="primary-nav"
+            aria-label="mobile menu toggle button"
+          >
+            <span class="sr-only">Mobile navigation menu</span>
+            <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
+                fill="#FFF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <ul class="nav__list js-nav__list" role="list">
             <li class="nav__link" data-type="primary">
               <a href="#about">About</a>
             </li>
@@ -61,18 +77,6 @@
               <a href="#contact">Contact</a>
             </li>
           </ul>
-          <button
-            class="js-menu-btn menu-btn"
-            aria-label="button that opens and closes mobile menu"
-          >
-            <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
-                fill="#FFF"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
         </nav>
       </div>
     </header>

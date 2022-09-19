@@ -336,6 +336,18 @@ footer h4:focus path {
     opacity: 0;
 }
 
+.highlight > *:focus {
+    outline: none;
+}
+
+.highlight:focus-within {
+    outline: 2px solid hsl(var(--clr-accent-2-400));
+}
+
+.highlight:focus-within::before {
+    opacity: 0;
+}
+
 
 @media(min-width: 46.88em) {
     .highlight {
@@ -351,6 +363,22 @@ footer h4:focus path {
         background-color: hsl(var(--clr-neutral-100));
         
     }
+
+    .highlight:focus-within {
+        outline: 2px solid hsl(var(--clr-neutral-100));
+    }
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    border: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
 }
 
 /* ===== BLOCK ===== */
