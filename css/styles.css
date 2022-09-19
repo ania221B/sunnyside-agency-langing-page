@@ -36,7 +36,7 @@
 /* ===== GLOBAL STYLES ===== */
 
 ::selection {
-    background-color: hsl(var(--clr-accent-1-400));
+    background-color: hsl(var(--clr-accent-2-400));
     color: hsl(var(--clr-neutral-100));
 }
 
