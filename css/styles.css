@@ -35,6 +35,11 @@
 }
 /* ===== GLOBAL STYLES ===== */
 
+::selection {
+    background-color: hsl(var(--clr-accent-1-400));
+    color: hsl(var(--clr-neutral-100));
+}
+
 body {
     font-family: var(--ff-primary);
     font-size: var(--fs-400);
