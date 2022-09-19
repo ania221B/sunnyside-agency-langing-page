@@ -65,6 +65,12 @@ footer {
     text-align: center;
 }
 
+*:focus {
+    outline: none;
+    outline: 2px solid hsl(var(--clr-accent-1-400));
+    outline-offset: .5em;
+}
+
 /* ===== typography ===== */
 
 h1:hover path,
@@ -361,6 +367,7 @@ footer h4:focus path {
 }
 
 .skip-to-content:focus {
+    outline-offset: 0;
     transform: translate(-50%, 0);
 }
 
