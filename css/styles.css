@@ -502,7 +502,7 @@ footer h4:focus path {
 .hero .content-container > svg {
     margin-top: 4rem;
     animation: arrowPoint;
-    animation-duration: 1200ms;
+    animation-duration: 1400ms;
     animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
     animation-iteration-count: infinite;
 }
