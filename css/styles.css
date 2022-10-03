@@ -175,7 +175,7 @@ h3 {
 .about a::after {
     background-color: var(--link-hover-clr);
     opacity: 0;
-    transform: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
 }
 
 .about a:hover::after,
@@ -386,7 +386,7 @@ footer h4:focus path {
     white-space: nowrap !important;
 }
 
-/* ===== BLOCK ===== */
+/* ===== INDIVIDUAL SECTIONS ===== */
 
 .skip-to-content {
     position: absolute;
