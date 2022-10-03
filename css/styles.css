@@ -65,9 +65,10 @@ a {
 }
 
 footer {
-    padding-block: 4rem;
+    padding-block: 6rem;
     background-color: hsl(var(--clr-secondary-200));
     text-align: center;
+    position: relative;
 }
 
 *:focus {
@@ -594,7 +595,7 @@ footer h4:focus path {
 
 @media(min-width: 46.88em) {
     .testimonials {
-        padding-block: 8rem;
+        padding-block: 10rem;
     }
 }
 
@@ -607,10 +608,6 @@ footer h4:focus path {
 
 
 /* ===== footer ===== */
-
-footer {
-    position: relative;
-}
 
 footer .secondary-nav__list,
 footer .social-media-list {
