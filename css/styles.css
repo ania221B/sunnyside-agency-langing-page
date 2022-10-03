@@ -386,7 +386,7 @@ footer h4:focus path {
     white-space: nowrap !important;
 }
 
-/* ===== INDIVIDUAL SECTIONS ===== */
+/* ===== BLOCK ===== */
 
 .skip-to-content {
     position: absolute;
@@ -501,6 +501,22 @@ footer h4:focus path {
 
 .hero .content-container > svg {
     margin-top: 4rem;
+    animation: arrowPoint;
+    animation-duration: 1200ms;
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowPoint {
+    0% {
+        transform: translateY(-4rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* ===== about ===== */
