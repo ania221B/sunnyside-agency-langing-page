@@ -1,13 +1,49 @@
 const menuBtn = document.querySelector('.js-menu-btn')
+const nav = document.querySelector('#primary-navigation')
+
+function openMenu () {
+  menuBtn.setAttribute('aria-expanded', 'true')
+  nav.setAttribute('data-state', 'opened')
+}
+
+function closeMenu () {
+  menuBtn.setAttribute('aria-expanded', 'false')
+  nav.setAttribute('data-state', 'closing')
+}
 
 menuBtn.addEventListener('click', e => {
-  document.body.classList.toggle('menu-is-open')
+  const isOpened = menuBtn.getAttribute('aria-expanded') === 'true'
+  isOpened ? closeMenu() : openMenu()
+
+  document.body.addEventListener(
+    'animationend',
+    e => {
+      if (e.animationName === 'dropOpacity') {
+        nav.setAttribute('data-state', 'closed')
+      }
+    },
+    { once: true }
+  )
 })
 
 document.body.addEventListener('click', e => {
-  if (document.body.classList.contains('menu-is-open')) {
-    if (!e.target.closest('.js-nav__list') && !e.target.closest('.js-menu-btn')) {
-      document.body.classList.remove('menu-is-open')
+  const isOpened = menuBtn.getAttribute('aria-expanded') === 'true'
+  if (isOpened) {
+    if (
+      !e.target.closest('.js-nav__list') &&
+      !e.target.closest('.js-menu-btn')
+    ) {
+      closeMenu()
     }
   }
+
+  document.body.addEventListener(
+    'animationend',
+    e => {
+      if (e.animationName === 'dropOpacity') {
+        nav.setAttribute('data-state', 'closed')
+      }
+    },
+    { once: true }
+  )
 })
